@@ -115,7 +115,7 @@ git co -b pag-estaticas
 ```
 - Crear las paginas estaticas
 ```sh
-rails g controller Static home contact about help forum
+rails g controller Static home contact about help forum --no-assets
 ```
 - Modificar el archivo /config/routes.rb para que tenga pagina root
 ```sh
