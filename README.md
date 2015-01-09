@@ -1,8 +1,10 @@
 # Fitness Notes
 
 Autor:            Fernando J. Muñoz 
+
 Descripción:      El objetivo de esta aplicación es poder registrar el progreso en un plan 
                   de fitness y de dieta. 
+                  
 Fecha de inicio:  09/01/2015
 
 ---
