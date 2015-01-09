@@ -86,7 +86,7 @@ git commit -m "Commit inicial"
 ``` 
 - Subimos las modificaciones a GitHub
 ```sh
-git remote add origin git@github.com:munozfj/project.git
+git remote add origin git@github.com:munozfj/fitness-notes.git
 git push -u origin master
 ``` 
 - Publicar en Heroku
