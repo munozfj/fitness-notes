@@ -1,18 +1,25 @@
 # == Route Map
 #
-# You don't have any routes defined!
-#
-# Please add some routes in config/routes.rb.
-#
-# For more information about routes, see the Rails guide: http://guides.rubyonrails.org/routing.html.
+#  Prefix Verb URI Pattern        Controller#Action
+# contact GET  /contact(.:format) static#contact
+#   about GET  /about(.:format)   static#about
+#    help GET  /help(.:format)    static#help
+#    form GET  /forum(.:format)   static#forum
+#    root GET  /                  static#home
 #
 
 Rails.application.routes.draw do
+
+  get 'contact', to: 'static#contact', as: 'contact'
+  get 'about',   to: 'static#about',   as: 'about'
+  get 'help',    to: 'static#help',    as: 'help'
+  get 'forum',   to: 'static#forum',   as: 'form'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'static#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

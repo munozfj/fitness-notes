@@ -4,7 +4,7 @@ Autor:            Fernando J. Muñoz
 
 Descripción:      El objetivo de esta aplicación es poder registrar el progreso en un plan 
                   de fitness y de dieta. 
-                  
+
 Fecha de inicio:  09/01/2015
 
 ---
@@ -101,6 +101,70 @@ heroku apps:rename project
 heroku logs
 heroku open
 ``` 
+---
+##Fecha: 09/01/2015
+###Objetivos:
+- Crear páginas estáticas
+- Establecer Root
+- Crear rutas con nombre
+
+###Pasos:
+- Creo una nueva rama de desarrollo y me cambio a la pagina
+```sh
+git co -b pag-estaticas 
+```
+- Crear las paginas estaticas
+```sh
+rails g controller Static home contact about help forum
+```
+- Modificar el archivo /config/routes.rb para que tenga pagina root
+```sh
+root 'static#home' 
+```
+- Crear nombres para las paginas estaticas
+```sh
+get 'contact', to: 'static#contact', as: 'contact'
+get 'about', to: 'static#about', as: 'about'
+get 'help', to: 'static#help', as: 'help'
+get 'forum', to: 'static#forum', as: 'form'
+```
+- Reiniciar el servidor web para que tome los cambios realizados
+- Registrar en routes.rb las nuevas rutas
+```sh
+annotate --routes
+```
+- Para ver los nombres de las rutas hacer
+```sh
+rake routes
+```
+- Modificar levemente las vistas de las paginas estáticas
+- Confirmar cambios en la rama
+```sh
+git branch
+git status
+git add -A
+git commit -m "Paginas estaticas"
+```
+- Coloco los cambios de la rama en MASTER
+```sh
+git co master
+git branch
+git merge <nombre rama aux>
+```
+- Subir los cambios a GitHub
+```sh
+git push
+```
+- Subir los cambios a Heroku
+```sh
+git push heroku
+heroku open  
+```
+- La rama auxiliar se podria eliminar
+```sh
+git branch
+git -d <nombre rama aux>
+```
 
 
 
