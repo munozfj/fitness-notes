@@ -1,0 +1,42 @@
+//Variables
+$background: #1387FF;
+$darker: #00356D;
+$dark: #00458D;
+$light: #7BBCFF;
+$lighter: #ABD4FF;
+
+body
+{
+  padding-top: 20px;
+  background-color: $lighter;
+  color: white;
+}
+
+footer
+{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.container
+{
+  background-color: transparent;
+}
+
+.jumbotron 
+{
+  background: $dark;
+}
+
+h1
+{
+  font-family: 'Great Vibes', cursive;
+}
+
+.navbar-brand
+{
+  font-family: 'Great Vibes', cursive;
+  font-weight: bolder;
+  font-size: 27px;
+}
