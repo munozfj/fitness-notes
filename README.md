@@ -233,9 +233,14 @@ rails generate layout:navigation --force
 ```
 - Crear /views/layouts el partial _header_javacript.html.erb
 ```sh
+<%
+#Importante:
+#Por cuestiones de seguridad los browsers bloquearan todo acceso a paginas que sean http
+#Para poder usar las fuentes de Google Fonts sin problemas, se eliminara http: de la url de acceso
+%>
 <!-- Letras de la aplicacion -->
-<link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 ```
 - Modificar el layo de la aplicación para que contenga los partials anteiores
 ```sh
